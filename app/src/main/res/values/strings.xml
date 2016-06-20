@@ -1,0 +1,31 @@
+<resources>
+    <string name="app_name">sliderfragment</string>
+    <string name="action_settings">Settings</string>
+    <string name="section_format">Hello World from section: %1$d</string>
+    <string name="title_activity_info">Info</string>
+    <string name="title_activity_user">User</string>
+    <string-array name="spinner_array">
+        <item>Select a category</item>
+        <item>Medical</item>
+        <item>Btech</item>
+        <item>MBA</item>
+    </string-array>
+    <string-array name="spinner_array2">
+        <item>Select a category</item>
+        <item>M</item>
+        <item>B</item>
+        <item>M</item>
+    </string-array>
+    <string-array name="spinner_array3">
+        <item>Select a category</item>
+        <item>123</item>
+        <item>234</item>
+        <item>345</item>
+    </string-array>
+    <string name="title_activity_btech_list">Btech_list</string>
+    <string name="title_activity_college1">college1</string>
+    <string name="title_activity_start">StartActivity</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+</resources>
