@@ -25,12 +25,19 @@ public class Btech_list extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_btech_list);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        Bundle bundle = getIntent().getExtras();
         setSupportActionBar(toolbar);
-        createGroupList();
-
-        createCollection();
 
         expListView = (ExpandableListView) findViewById(R.id.expanding_list);
+
+        //int ch=bundle.getInt("careerchoice");
+        createGroupList();
+
+        createCollection(bundle.getInt("careerchoice"));
+
+
+
+
         final ExpandableListAdapter expListAdapter = new ExpandableListAdapter(
                 this, groupList, laptopCollection);
         expListView.setAdapter(expListAdapter);
@@ -65,20 +72,36 @@ public class Btech_list extends AppCompatActivity {
         groupList.add("Search by Relevant Exams in the Career Choice");
     }
 
-    private void createCollection() {
+    private void createCollection(int choice) {
         // preparing laptops collection(child)
         String[] collegezone = { "North", "South", "East", "West" };
         //String[] college = { "HCL1", "HCL2", "HCL3" };
-        String[] exam = { "AIEEE", "VIT", "MANIPAL", "UPTECH" };
+        String[] exam_btech = { "AIEEE", "VIT", "MANIPAL", "UPTECH" };
+        String[] exam_mba = { "CAT", "XAT", "MAT", "XLRI" };
         laptopCollection = new LinkedHashMap<String, List<String>>();
 
-        for (String laptop : groupList) {
-            if (laptop.equals("Search by Zones")) {
-                loadChild(collegezone);
-            } else if (laptop.equals("Search by Relevant Exams in the Career Choice"))
-                loadChild(exam);
+        switch(choice) {
+            case 2: {
+                for (String laptop : groupList) {
+                    if (laptop.equals("Search by Zones")) {
+                        loadChild(collegezone);
+                    } else if (laptop.equals("Search by Relevant Exams in the Career Choice"))
+                        loadChild(exam_btech);
 
-            laptopCollection.put(laptop, childList);
+                    laptopCollection.put(laptop, childList);
+                }
+                break;
+            }
+            case 3:
+                for (String laptop : groupList) {
+                    if (laptop.equals("Search by Zones")) {
+                        loadChild(collegezone);
+                    } else if (laptop.equals("Search by Relevant Exams in the Career Choice"))
+                        loadChild(exam_mba);
+
+                    laptopCollection.put(laptop, childList);
+                }
+                break;
         }
     }
 

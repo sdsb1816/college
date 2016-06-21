@@ -13,6 +13,7 @@ import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -199,6 +200,9 @@ public class MainActivity extends AppCompatActivity {
                                 .equals("Btech")) {
                             search_item="Btech";
                            Intent i = new Intent(getActivity(), Btech_list.class);
+                            i.putExtra("careerchoice",position);
+
+                            Log.d("Postition : ","pos " + position);
                             startActivity(i);
                             spinner.setSelection(0);
                              getActivity().finish();
