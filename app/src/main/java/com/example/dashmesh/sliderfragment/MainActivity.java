@@ -196,10 +196,11 @@ public class MainActivity extends AppCompatActivity {
                     public void onItemSelected(AdapterView<?> parent, View view,
                                                int position, long id) {
                         String search_item;
-                        if (parent.getItemAtPosition(position).toString()
-                                .equals("Btech")) {
-                            search_item="Btech";
-                           Intent i = new Intent(getActivity(), Btech_list.class);
+                        if (position!=0)
+                        {
+                            //search_item="Btech";
+
+                            Intent i = new Intent(getActivity(), Btech_list.class);
                             i.putExtra("careerchoice",position);
 
                             Log.d("Postition : ","pos " + position);
@@ -252,7 +253,7 @@ public class MainActivity extends AppCompatActivity {
 
         @Override
         public int getCount() {
-            // Show 3 total pages.
+            // Show  total pages.
             return 2;
         }
 

@@ -25,7 +25,9 @@
     <string name="title_activity_btech_list">Btech_list</string>
     <string name="title_activity_college1">college1</string>
     <string name="title_activity_start">StartActivity</string>
-
+    <string name="search_title">Search</string>
+    <string name="search_hint">College name</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="title_activity_search_college">SearchCollege</string>
 </resources>

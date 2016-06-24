@@ -88,13 +88,9 @@ public class StartActivity extends AppCompatActivity
         } else if (id == R.id.user) {
             Intent intent = new Intent(StartActivity.this,User.class);
             startActivity(intent);
-        } else if (id == R.id.nav_slideshow) {
-
-        } else if (id == R.id.nav_manage) {
-
-        } else if (id == R.id.nav_share) {
-
-        } else if (id == R.id.nav_send) {
+        } else if (id == R.id.college) {
+            //Intent intent2=new Intent(StartActivity.this,SearchCollege.class);
+            //startActivity(intent2);
 
         }
 
